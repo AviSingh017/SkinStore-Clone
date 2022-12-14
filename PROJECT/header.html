@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/3af5a307c6.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* first div head 1 styling */
+
+      header {
+        background-color: #fff;
+        font-family: montserrat;
+        position: sticky;
+        width: 100%;
+        top: 0%;
+        /* border: 1px solid red; */
+      }
+
+      .imagelogo {
+        width: 200px;
+        /* border: 1px solid red; */
+      }
+      
+      hr {
+        height: 1px;
+        background-color: black;
+        margin: 0px;
+      }
+
+      .search {
+        padding: 10px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1.5px solid black;
+        width: 400px;
+        height: 22px;
+        border-radius: 25px;
+      }
+
+      .search input {
+        font-family: montserrat;
+        flex: 1;
+        border: none;
+        outline: none;
+        /* border: 1px solid tomato; */
+      }
+
+      .search button {
+        font-size: 25px;
+        cursor: pointer;
+        background-color: #fff;
+        border: none;
+        outline: none;
+        /* border: 1px solid red; */
+      }
+
+      .accn{
+        width: 100px;
+        /* border: 1px solid; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 17px;
+      }
+
+      .cart{
+        width: 65px;
+        /* border: 1px solid; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 17px;
+      }
+
+
+      .accn a{
+        color: #2e3337;
+      }
+      .cart a{
+        color: #2e3337;
+      }
+
+      .head1 {
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* border: 1px solid black; */
+      }
+
+      .logo {
+        font-size: 35px;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: 0.5s;
+      }
+      .head2 {
+        font-size: 15px;
+        padding: 0px;
+        margin: 0px;
+        justify-content: center;
+        margin-top: 0px;
+      }
+      .head2 > ul {
+        padding: 10px;
+        margin: 0px;
+        position: relative;
+        display: flex;
+      }
+      .head2 > ul > li {
+        /* position: relative; */
+        list-style: none;
+      }
+      .head2 > ul > li > a {
+        text-decoration: none;
+        color: black;
+        /* position: relative; */
+        list-style: none;
+        padding: 10px;
+      }
+      .head2 > ul > li > a:hover {
+        background-color: black;
+        color: white;
+        border-radius: 15px;
+        transition: 0.5s;
+      }
+
+      /* //midsection starts */
+
+      .banner {
+        background-color: #f1f1f1;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 10px;
+        padding: 10px;
+      }
+      .banner a {
+        font-size: 17px;
+        color: black;
+      }
+
+      .banner2 {
+        background-color: #2e3337;
+        text-align: center;
+        margin-top: 10px;
+        justify-content: center;
+        align-items: center;
+      }
+      .banner2 h2 {
+        cursor: pointer;
+        font-size: 21px;
+        font-family: montserrat;
+        padding: 5px;
+        color: white;
+      }
+
+      .banner2 h2:hover {
+        background-color: #fff;
+        color: #2e3337;
+      }
+
+      .scat h2 {
+        text-align: center;
+        font-family: "Lato-Regular", Helvetica, Arial, sans-serif;
+        font-size: 40px;
+        margin-bottom: 50px;
+        color: #2e3337;
+        font-weight: 350;
+      }
+
+      .scatimg {
+        cursor: pointer;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+      }
+      .scatimg > div > img {
+        width: 205px;
+      }
+
+      .trending {
+        /* border: 1px solid blue; */
+        width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: space-around;
+      }
+      .trending > div {
+        width: 30%;
+        /* border: 1px solid blue; */
+        text-align: center;
+      }
+      .trending > div > img {
+        width: 380px;
+      }
+      .trending > div > h3 {
+        font-family: "Lato-Regular", Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.2;
+        color: #2e3337;
+        font-weight: 500;
+        color: #333;
+      }
+      .trending > div > p {
+        font-family: "Lato-Light", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.4;
+        color: #2e3337;
+        font-weight: 300;
+        text-transform: none;
+        display: block;
+        flex-grow: 2;
+      }
+      .btn {
+        margin: auto;
+        width: 100px;
+        border: 1px solid black;
+        padding: 15px;
+        font-family: montserrat;
+        font-size: 15px;
+      }
+
+      .logobanner {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logobanner > div {
+        padding: 10px;
+      }
+
+      .logobanner img {
+        width: 180px;
+      }
+
+      .longbanner1 {
+        cursor: pointer;
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      .longbanner1 img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="head1">
+        <a href="#" class="logo"
+          ><img src="SkinVerse.png" class="imagelogo" alt=""
+        /></a>
+        <form class="search">
+          <input
+            type="text"
+            placeholder="Search for a Product or Brand"
+            name="search"
+          />
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+
+        <div class="accn">
+          <i class="fas fa-user"></i>
+          <a href="login.html">Account</a>
+        </div>
+
+        <div class="cart">
+          <i class="fas fa-shopping-cart"></i>
+          <a href="#">Cart</a>
+        </div>
+
+      </div>
+      <hr />
+      <div class="head2">
+        <ul>
+          <li><a href="#">Brands</a></li>
+          <li><a href="#">Holiday Gifts 🎁</a></li>
+          <li><a href="#">Sale</a></li>
+          <li><a href="#">Skin Care</a></li>
+          <li><a href="#">Hair</a></li>
+          <li><a href="#">Makeup</a></li>
+          <li><a href="#">Bath & Body</a></li>
+          <li><a href="#">Fragrance</a></li>
+          <li><a href="#">Self-Care</a></li>
+          <li><a href="#">Tools</a></li>
+          <li><a href="#">New & Trending</a></li>
+          <li><a href="#">Build a Routine</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="banner">
+      <a href="#">
+        <i class="fa-solid fa-truck"></i> FREE US Shipping Over $49</a
+      >
+      <a href="#"><i class="fa-solid fa-coins"></i> Refer a Friend, Get $15</a>
+      <a href="#"
+        ><i class="fa-solid fa-piggy-bank"></i> New Customers Save 20% USE Code
+        NEWBIE</a
+      >
+      <a href="#"> <i class="fa-solid fa-mobile"></i> Download Our App</a>
+    </div>
+
+    <div class="banner2">
+      <h2>
+        25% off with code REPLAY + free Holiday Beauty Bag (worth $170)@$150+
+        |SHOP NOW >
+      </h2>
+    </div>
+
+    <div class="scat">
+      <h2>Shop by Category</h2>
+    </div>
+    <div class="scatimg">
+      <div>
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/121-us/04/round_widget_ss_homepage_-_Untitled_Page-062904.png"
+          alt="Error"
+        />
+      </div>
+      <div>
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/121-us/06/round_widget_ss_homepage_-_Untitled_Page_%281%29-062906.png"
+          alt="Error"
+        />
+      </div>
+      <div>
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/121-us/26/round_widget_ss_homepage_-_Untitled_Page_%282%29-062926.png"
+          alt="Error"
+        />
+      </div>
+      <div>
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/121-us/11/round_widget_ss_homepage_-_Untitled_Page_%283%29-063011.png"
+          alt="Error"
+        />
+      </div>
+      <div>
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/121-us/07/round_widget_ss_homepage_-_Untitled_Page_%286%29-063207.png"
+          alt="Error"
+        />
+      </div>
+      <div>
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/121-us/32/round_widget_ss_homepage_-_Untitled_Page_%285%29-063132.png"
+          alt="Error"
+        />
+      </div>
+    </div>
+
+    <div class="scat">
+      <h2>Trending Offers</h2>
+    </div>
+
+    <div class="trending">
+      <div>
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/121-us/53/original-500x500-041753.jpeg"
+          alt="Error"
+        />
+        <h3>SkinCeuticals Gift</h3>
+        <p>
+          Receive a SkinCeuticals Resveratrol BE 4ml (Worth $21) when you spend
+          $220 or more on the brand.
+        </p>
+        <div class="btn">SHOP NOW</div>
+      </div>
+      <div>
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/121-us/05/original-500x500-041805.jpeg"
+          alt="Error"
+        />
+        <h3>20% off SkinMedica + $135 gift</h3>
+        <p>
+          Receive a FREE SkinMedica Eye Illuminating Kit (Worth $135) when you
+          spend $250 or more on the brand.
+        </p>
+        <div class="btn">SHOP NOW</div>
+      </div>
+      <div>
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/121-us/14/original-500x500-060614.jpg"
+          alt="Error"
+        />
+        <h3>25% off 111SKIN + $95 gift</h3>
+        <p>
+          Plus, receive a 111SKIN Defence Bright Eye Lift Gel Mini 7.5ml. when
+          you spend $250 or more on the brand.
+        </p>
+        <div class="btn">SHOP NOW</div>
+      </div>
+    </div>
+
+    <div class="logobanner">
+      <div>
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/121-us/26/180x72_4_233548301_CA_SS_Logo_Amend_BAU_THG0030424-041301-124116-063126.png"
+          alt="Error"
+        />
+      </div>
+      <div>
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/121-us/18/original-logo-1024x383-035229-063318.png"
+          alt="Error"
+        />
+      </div>
+      <div>
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/121-us/11/Revision_Skincare_Logo_without_Tag_Line-052511.png"
+          alt="Error"
+        />
+      </div>
+      <div>
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/121-us/46/original-NF_Skinstore_Banner_Logo_Color_320x140-01-011402-010546.png"
+          alt="Error"
+        />
+      </div>
+      <div>
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/121-us/27/220322-ELTAMD-LOGO-RGB-01-065127.png"
+          alt="Error"
+        />
+      </div>
+      <div>
+        <img
+          src="https://static.thcdn.com/images/small/webp/widgets/121-us/07/original-LOGO-2022_SkinStore_Landing_Page-BLACK-060107.png"
+          alt="Error"
+        />
+      </div>
+    </div>
+
+    <div class="longbanner1">
+      <img
+        src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/33/Skinstore_August_Referral_-_Untitled_Page_%281%29-022033.png"
+        alt="Error"
+      />
+    </div>
+
+    <div class="longbanner1">
+      <img
+        src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/32/original-0308-STDCRE32346-SS-AH-SkinStore-Concierge-Banners-1180x200-084632.jpg"
+        alt="Error"
+      />
+    </div>
+  </body>
+</html>
