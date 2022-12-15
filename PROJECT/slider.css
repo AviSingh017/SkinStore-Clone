@@ -1,0 +1,27 @@
+.carousel {
+    background: #222;
+  }
+  
+  .carousel-cell {
+    width: 100%;
+    height: 485px;
+    margin-right: 10px;
+    /* center images in cells with flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel.is-fullscreen .carousel-cell {
+    height: 100%;
+  }
+  
+  .carousel-cell-image {
+    display: block;
+    max-height: 100%;
+  }
+  
+  .carousel.is-fullscreen .carousel-cell-image {
+    width: 100%;
+  }
+  

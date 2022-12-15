@@ -92,6 +92,7 @@ let formData1= JSON.parse(localStorage.getItem("skinstore-data")) || [];
         console.log(element);
         if(element.Name == form1.namee.value && element.Pass == form1.passwordd.value){
           alert("Sign in Successful Go to Homepage!")
+          window.location.href="index.html"
         }
         else{
           alert("Wrong Credentials")
