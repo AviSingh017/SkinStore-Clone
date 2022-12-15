@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="slider.css">
+    <!-- <link rel="stylesheet" href="productslider.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script
       src="https://kit.fontawesome.com/3af5a307c6.js"
       crossorigin="anonymous"
@@ -29,6 +33,7 @@
         position: sticky;
         width: 100%;
         top: 0%;
+        z-index: 100;
         /* border: 1px solid red; */
       }
 
@@ -240,6 +245,30 @@
         font-size: 15px;
       }
 
+      .what{
+        width: 95%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+      }
+
+      .Wbox{
+        /* border: 1px solid red; */
+        padding: 10px;
+        width: 95%;
+      }
+
+      .Wbox img{
+        width: 100%;
+      }
+
+      .what > div > div > button{
+        /* border: 1px solid red; */
+        width: 100%;
+        padding: 10px;
+      }
+
       .logobanner {
         margin-top: 50px;
         display: flex;
@@ -332,6 +361,29 @@
       </h2>
     </div>
 
+
+
+    <div>
+      <div class="carousel" style="position: relative;" data-flickity='{ "fullscreen": true, "lazyLoad": 1 }'>
+        <div class="carousel-cell">
+          <img class="carousel-cell-image"
+            data-flickity-lazyload="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/46/1130-STDCRE-44452-SS-MH-Q4-Photography-December-THG0035165-Batching-And-Artwork-P2-Shot-2-1180x450.jpeg-050446.jpg" />
+        </div>
+        <div class="carousel-cell">
+          <img class="carousel-cell-image"
+            data-flickity-lazyload="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/55/Shot6-1180x450-095455.jpeg" />
+        </div>
+        <div class="carousel-cell">
+          <img class="carousel-cell-image"
+            data-flickity-lazyload="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/10/original-New_Project_%283%29-085610.jpg" />
+        </div>
+      </div>
+    </div>
+    
+    
+
+
+
     <div class="scat">
       <h2>Shop by Category</h2>
     </div>
@@ -374,6 +426,10 @@
       </div>
     </div>
 
+    <!-- <div class="scat">
+      <h2>Missed Black Friday?</h2>
+    </div> -->
+
     <div class="scat">
       <h2>Trending Offers</h2>
     </div>
@@ -414,6 +470,49 @@
           you spend $250 or more on the brand.
         </p>
         <div class="btn">SHOP NOW</div>
+      </div>
+    </div>
+
+    <div class="scat">
+      <h2>What People are Buying?</h2>
+    </div>
+
+    <div class="what">
+
+      <div class="Wbox">
+        <img src="https://static.thcdn.com/images/small/webp//productimg/480/480/11289609-1174892770940184.jpg" alt="">
+        <p>SkinCeuticals C E Ferulic with 15% L-Ascorbic Acid Vitamin C Serum 30ml </p>
+        <p>$169.00</p>
+        <div>
+          <button><a href=""><i class="fa-solid fa-bag-shopping"></i> Shop Now</a></button>
+        </div>
+      </div>
+
+      <div class="Wbox">
+         <img src="https://static.thcdn.com/images/small/webp//productimg/480/480/13973771-1764998807002190.jpg" alt="">
+        <p>Eve Lom Decadent Double Cleanse Ritual Holiday Set 2022 (Worth $235.00)</p>
+        <p>$155.00</p>
+        <div>
+          <button><a href=""><i class="fa-solid fa-bag-shopping"></i> Shop Now</a></button>
+        </div>
+      </div>
+
+      <div class="Wbox">
+         <img src="https://static.thcdn.com/images/small/webp//productimg/480/480/12434373-1744821040696653.jpg" alt="">
+        <p>BIOEFFECR EGF Eye Serum 6ml Receive a FREE SkinMedica Eye kit</p>
+        <p>$95.00</p>
+        <div>
+          <button><a href=""><i class="fa-solid fa-bag-shopping"></i> Shop Now</a></button>
+        </div>
+      </div>
+      
+      <div class="Wbox">
+         <img src="https://static.thcdn.com/images/small/webp//productimg/480/480/12588477-1794776910642146.jpg" alt="">
+        <p>111SKIN Y Theorem Bio Cellulose Facial Mask Single 0.87 oz (Worth $32.00)</p>
+        <p>$10.00</p>
+        <div>
+          <button><a href=""><i class="fa-solid fa-bag-shopping"></i> Shop Now</a></button>
+        </div>
       </div>
     </div>
 
@@ -470,4 +569,5 @@
       />
     </div>
   </body>
+  <script type="text/javascript" src="js/main.js"></script>
 </html>

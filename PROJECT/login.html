@@ -21,8 +21,8 @@
                 <img src="gp.png" alt="Error">
             </div>
             <form id="login" class="input-grp">
-                <input type="text" class="input-space" placeholder="User Id" required>
-                <input type="password" class="input-space" placeholder="Enter Password" required>                
+                <input type="text" id="namee" class="input-space" placeholder="User Id" required>
+                <input type="password" id="passwordd" class="input-space" placeholder="Enter Password" required>                
                 <input type="checkbox" class="check-box"><span>Remember Password</span>                
                 <button type="submit" class="submit-btn">Log In</button>                
             </form>
@@ -89,9 +89,10 @@ let formData1= JSON.parse(localStorage.getItem("skinstore-data")) || [];
       e.preventDefault();
 
       formData1.forEach(element => {
-        console.log(form.element.value);
-        if(element.Email == form.email.value && element.Pass == form.password.value){
-          alert("Sign in Successful")
+        console.log(element);
+        if(element.Name == form1.namee.value && element.Pass == form1.passwordd.value){
+          alert("Sign in Successful Go to Homepage!")
+          window.location.href="index.html"
         }
         else{
           alert("Wrong Credentials")
