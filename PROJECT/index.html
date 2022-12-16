@@ -4,9 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SkinVerse - Homepage</title>
     <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="Prdslider.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <!-- <link rel="stylesheet" href="productslider.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script
@@ -14,142 +22,12 @@
       crossorigin="anonymous"
     ></script>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@600&family=Quicksand&display=swap');
 
       body {
         margin: 0px;
         padding: 0px;
       }
-
-      a {
-        text-decoration: none;
-      }
-
-      /* first div head 1 styling */
-
-      header {
-        background-color: #fff;
-        font-family: montserrat;
-        position: sticky;
-        width: 100%;
-        top: 0%;
-        z-index: 100;
-        /* border: 1px solid red; */
-      }
-
-      .imagelogo {
-        width: 200px;
-        /* border: 1px solid red; */
-      }
-      
-      hr {
-        height: 1px;
-        background-color: black;
-        margin: 0px;
-      }
-
-      .search {
-        padding: 10px 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border: 1.5px solid black;
-        width: 400px;
-        height: 22px;
-        border-radius: 25px;
-      }
-
-      .search input {
-        font-family: montserrat;
-        flex: 1;
-        border: none;
-        outline: none;
-        /* border: 1px solid tomato; */
-      }
-
-      .search button {
-        font-size: 25px;
-        cursor: pointer;
-        background-color: #fff;
-        border: none;
-        outline: none;
-        /* border: 1px solid red; */
-      }
-
-      .accn{
-        width: 100px;
-        /* border: 1px solid; */
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 17px;
-      }
-
-      .cart{
-        width: 65px;
-        /* border: 1px solid; */
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 17px;
-      }
-
-
-      .accn a{
-        color: #2e3337;
-      }
-      .cart a{
-        color: #2e3337;
-      }
-
-      .head1 {
-        padding-top: 10px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        /* border: 1px solid black; */
-      }
-
-      .logo {
-        font-size: 35px;
-        position: relative;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        transition: 0.5s;
-      }
-      .head2 {
-        font-size: 15px;
-        padding: 0px;
-        margin: 0px;
-        justify-content: center;
-        margin-top: 0px;
-      }
-      .head2 > ul {
-        padding: 10px;
-        margin: 0px;
-        position: relative;
-        display: flex;
-      }
-      .head2 > ul > li {
-        /* position: relative; */
-        list-style: none;
-      }
-      .head2 > ul > li > a {
-        text-decoration: none;
-        color: black;
-        /* position: relative; */
-        list-style: none;
-        padding: 10px;
-      }
-      .head2 > ul > li > a:hover {
-        background-color: black;
-        color: white;
-        border-radius: 15px;
-        transition: 0.5s;
-      }
-
-      /* //midsection starts */
 
       .banner {
         background-color: #f1f1f1;
@@ -160,6 +38,7 @@
         padding: 10px;
       }
       .banner a {
+        font-family: quicksand;
         font-size: 17px;
         color: black;
       }
@@ -216,10 +95,17 @@
         text-align: center;
       }
       .trending > div > img {
+        cursor: pointer;
         width: 380px;
+        border-radius: 50%;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
+
+      .trending>div>img:hover{
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
       }
       .trending > div > h3 {
-        font-family: "Lato-Regular", Helvetica, Arial, sans-serif;
+        font-family: manrope;
         font-size: 18px;
         line-height: 1.2;
         color: #2e3337;
@@ -227,7 +113,7 @@
         color: #333;
       }
       .trending > div > p {
-        font-family: "Lato-Light", Helvetica, Arial, sans-serif;
+        font-family: quicksand;
         font-size: 14px;
         line-height: 1.4;
         color: #2e3337;
@@ -237,12 +123,19 @@
         flex-grow: 2;
       }
       .btn {
+        cursor: pointer;
         margin: auto;
         width: 100px;
         border: 1px solid black;
         padding: 15px;
         font-family: montserrat;
-        font-size: 15px;
+        font-size: 12px;
+      }
+
+      .btn:hover{
+        background-color: #2e3337;
+        color: #fff;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
       }
 
       .what{
@@ -259,6 +152,11 @@
         width: 95%;
       }
 
+      .Wbox>p{
+        font-size: 15px;
+        font-family: manrope;
+      }
+
       .Wbox img{
         width: 100%;
       }
@@ -267,6 +165,16 @@
         /* border: 1px solid red; */
         width: 100%;
         padding: 10px;
+        color: whitesmoke;
+        background-color: #2e3337;
+      }
+      .what > div > div > button >a{
+        margin-left: 7px;
+        cursor: pointer;
+        text-decoration: none;
+        color: #fff;
+        font-family: montserrat;
+        font-size: 13px;
       }
 
       .logobanner {
@@ -362,26 +270,20 @@
     </div>
 
 
-
-    <div>
-      <div class="carousel" style="position: relative;" data-flickity='{ "fullscreen": true, "lazyLoad": 1 }'>
-        <div class="carousel-cell">
-          <img class="carousel-cell-image"
-            data-flickity-lazyload="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/46/1130-STDCRE-44452-SS-MH-Q4-Photography-December-THG0035165-Batching-And-Artwork-P2-Shot-2-1180x450.jpeg-050446.jpg" />
-        </div>
-        <div class="carousel-cell">
-          <img class="carousel-cell-image"
-            data-flickity-lazyload="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/55/Shot6-1180x450-095455.jpeg" />
-        </div>
-        <div class="carousel-cell">
-          <img class="carousel-cell-image"
-            data-flickity-lazyload="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/10/original-New_Project_%283%29-085610.jpg" />
-        </div>
+    <div class="swiper mySlider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/46/1130-STDCRE-44452-SS-MH-Q4-Photography-December-THG0035165-Batching-And-Artwork-P2-Shot-2-1180x450.jpeg-050446.jpg" alt="Error"></div>
+        <div class="swiper-slide"><img src="https://logan.nnnow.com/content/dam/nnnow-project/12-dec-2022/se/Bobbibrown_Topbanner01_desktop.jpg
+          " alt="Error"></div>
+        <div class="swiper-slide"><img src="https://logan.nnnow.com/content/dam/nnnow-project/12-dec-2022/se/ABH_Christmas.jpg
+          " alt="Error"></div>
+        <div class="swiper-slide"><img src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/55/Shot6-1180x450-095455.jpeg" alt="Error"></div>
+        <div class="swiper-slide"><img src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/10/original-New_Project_%283%29-085610.jpg" alt="Error"></div>
       </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
-    
-    
-
 
 
     <div class="scat">
@@ -426,9 +328,230 @@
       </div>
     </div>
 
-    <!-- <div class="scat">
+    <div class="scat">
       <h2>Missed Black Friday?</h2>
-    </div> -->
+    </div>
+
+    <div class="container">
+      <!-- New product slider -->
+      <div class="slider-container" id="new-products">
+        <div class="slides-wrapper">
+          <div class="slides-container">
+            <ul class="slider-list">
+              <li class="slider-item">
+                <a href="#">
+                  <img src="https://static.thcdn.com/images/medium/webp/widgets/121-us/11/original-original-500x500_bestseller-033626-040911.jpg" alt="New Product 1" />
+                </a>
+              </li>
+              <li class="slider-item">
+                <a href="#">
+                  <img src="https://static.thcdn.com/images/medium/webp/widgets/121-us/42/original-580x384-073642.jpeg" alt="New Product 2" />
+                </a>
+                <hr>
+                <h1>Featured Products</h1>
+                <hr>
+              </li>
+              <li class="slider-item">
+                <a href="#">
+                  <img src="https://static.thcdn.com/images/medium/webp/widgets/121-us/28/600x600-065228.jpeg" alt="New Product 3" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="slider-arrows">
+          <button type="button" id="hide" class="slider-arrow-prev"></button>
+          <button type="button" id="hide" class="slider-arrow-next"></button>
+        </div>
+      </div>
+      </div>
+      <!-- <br> -->
+      <div class="scat">
+        <h2>Best Selling Products</h2>
+      </div>
+      <!-- <br> -->
+      <div class="slider-container bg-red" id="featured-products">
+        <div class="slides-wrapper">
+          <div class="slides-container">
+            <ul class="slider-list">
+              <li class="slider-item">
+                <a href="#">
+                  <img src="https://static.thcdn.com/images/xsmall/webp//productimg/original/13973773-1864997258135967.jpg" alt="Featured Product 1" />
+                </a>
+                <h4>The Original Product of the ERA</h4>
+                <p>$159.00</p>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <div>
+                  <button><a href="#">QUICK BUY</a></button>
+                </div>
+              </li>
+              <li class="slider-item">
+                <a href="#">
+                  <img src="https://static.thcdn.com/images/xsmall/webp//productimg/original/13973771-1764998807002190.jpg" alt="Featured Product 2" />
+                </a>
+                <h4>The Original Product of the ERA</h4>
+                <p>$159.00</p>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <div>
+                  <button><a href="#">QUICK BUY</a></button>
+                </div>
+              </li>
+              <li class="slider-item">
+                <a href="#">
+                  <img src="https://static.thcdn.com/images/xsmall/webp//productimg/original/13899712-1784998013071582.jpg" alt="Featured Product 3" />
+                </a>
+                <h4>The Original Product of the ERA</h4>
+                <p>$159.00</p>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <div>
+                  <button><a href="#">QUICK BUY</a></button>
+                </div>
+              </li>
+              <li class="slider-item">
+                <a href="#">
+                  <img src="https://static.thcdn.com/images/xsmall/webp//productimg/original/13885104-6704996676979558.jpg" alt="Featured Product 4" />
+                </a>
+                <h4>The Original Product of the ERA</h4>
+                <p>$159.00</p>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <div>
+                  <button><a href="#">QUICK BUY</a></button>
+                </div>
+              </li>
+              <li class="slider-item">
+                <a href="#">
+                  <img src="https://static.thcdn.com/images/xsmall/webp//productimg/original/13953408-3984994956215870.jpg" alt="Featured Product 5" />
+                </a>
+                <h4>The Original Product of the ERA</h4>
+                <p>$159.00</p>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <div>
+                  <button><a href="#">QUICK BUY</a></button>
+                </div>
+              </li>
+              <li class="slider-item">
+                <a href="#">
+                  <img src="https://static.thcdn.com/images/xsmall/webp//productimg/original/11637470-1244924428811440.jpg" alt="Featured Product 6" />
+                </a>
+                <h4>The Original Product of the ERA</h4>
+                <p>$159.00</p>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <div>
+                  <button><a href="#">QUICK BUY</a></button>
+                </div>
+              </li>
+              <li class="slider-item">
+                <a href="#">
+                  <img src="https://static.thcdn.com/images/xsmall/webp//productimg/original/13973774-7134997258242365.jpg" alt="Featured Product 7" />
+                </a>
+                <h4>The Original Product of the ERA</h4>
+                <p>$159.00</p>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <div>
+                  <button><a href="#">QUICK BUY</a></button>
+                </div>
+              </li>
+              <li class="slider-item">
+                <a href="#">
+                  <img src="https://static.thcdn.com/images/xsmall/webp//productimg/original/13953407-1094994955968739.jpg" alt="Featured Product 8" />
+                </a>
+                <h4>The Original Product of the ERA</h4>
+                <p>$159.00</p>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <div>
+                  <button><a href="#">QUICK BUY</a></button>
+                </div>
+              </li>
+              <li class="slider-item">
+                <a href="#">
+                  <img src="https://static.thcdn.com/images/xsmall/webp//productimg/original/13651636-1874942870101906.jpg" alt="Featured Product 8" />
+                </a>
+                <h4>The Original Product of the ERA</h4>
+                <p>$159.00</p>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <div>
+                  <button><a href="#">QUICK BUY</a></button>
+                </div>
+              </li>
+              <li class="slider-item">
+                <a href="#">
+                  <img src="https://static.thcdn.com/images/xsmall/webp//productimg/original/11288898-2044866329672154.jpg" alt="Featured Product 8" />
+                </a>
+                <h4>The Original Product of the ERA</h4>
+                <p>$159.00</p>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <div>
+                  <button><a href="#">QUICK BUY</a></button>
+                </div>
+              </li>
+              <li class="slider-item">
+                <a href="#">
+                  <img src="https://static.thcdn.com/images/xsmall/webp//productimg/original/12588492-8644871816074089.jpg" alt="Featured Product 8" />
+                </a>
+                <h4>The Original Product of the ERA</h4>
+                <p>$159.00</p>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <div>
+                  <button><a href="#">QUICK BUY</a></button>
+                </div>
+              </li>
+              <li class="slider-item">
+                <a href="#">
+                  <img src="https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12434373-1744821040696653.jpg" alt="Featured Product 8" />
+                </a>
+                <h4>The Original Product of the ERA</h4>
+                <p>$159.00</p>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <strong><i class="fa-solid fa-star"></i></strong>
+                <div>
+                  <button><a href="#">QUICK BUY</a></button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="slider-arrows">
+          <button type="button" class="slider-arrow-prev">Prev</button>
+          <button type="button" class="slider-arrow-next">Next</button>
+        </div>
+      </div>
+
+
 
     <div class="scat">
       <h2>Trending Offers</h2>
@@ -484,16 +607,16 @@
         <p>SkinCeuticals C E Ferulic with 15% L-Ascorbic Acid Vitamin C Serum 30ml </p>
         <p>$169.00</p>
         <div>
-          <button><a href=""><i class="fa-solid fa-bag-shopping"></i> Shop Now</a></button>
+          <button><a href=""><i class="fa-solid fa-bag-shopping"></i> SHOP NOW</a></button>
         </div>
       </div>
 
       <div class="Wbox">
          <img src="https://static.thcdn.com/images/small/webp//productimg/480/480/13973771-1764998807002190.jpg" alt="">
-        <p>Eve Lom Decadent Double Cleanse Ritual Holiday Set 2022 (Worth $235.00)</p>
+        <p>Eve Lom Decadent Double Cleanse Holiday Set 2022 (Worth $235.00)</p>
         <p>$155.00</p>
         <div>
-          <button><a href=""><i class="fa-solid fa-bag-shopping"></i> Shop Now</a></button>
+          <button><a href=""><i class="fa-solid fa-bag-shopping"></i> SHOP NOW</a></button>
         </div>
       </div>
 
@@ -502,7 +625,7 @@
         <p>BIOEFFECR EGF Eye Serum 6ml Receive a FREE SkinMedica Eye kit</p>
         <p>$95.00</p>
         <div>
-          <button><a href=""><i class="fa-solid fa-bag-shopping"></i> Shop Now</a></button>
+          <button><a href=""><i class="fa-solid fa-bag-shopping"></i> SHOP NOW</a></button>
         </div>
       </div>
       
@@ -511,7 +634,7 @@
         <p>111SKIN Y Theorem Bio Cellulose Facial Mask Single 0.87 oz (Worth $32.00)</p>
         <p>$10.00</p>
         <div>
-          <button><a href=""><i class="fa-solid fa-bag-shopping"></i> Shop Now</a></button>
+          <button><a href=""><i class="fa-solid fa-bag-shopping"></i> SHOP NOW</a></button>
         </div>
       </div>
     </div>
@@ -568,6 +691,141 @@
         alt="Error"
       />
     </div>
+
+    <hr>
+
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__logo">SkinVerse</h1>
+            
+        <h2>Contact</h2>
+        
+        <address>
+          5534 LA DownTown India, Kolkata 22193-10212<br>
+              
+          <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+        </address>
+      </div>
+      
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Media</h2>
+    
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Online</a>
+            </li>
+    
+            <li>
+              <a href="#">Print</a>
+            </li>
+                
+            <li>
+              <a href="#">Alternative Ads</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav__item nav__item--extra">
+          <h2 class="nav__title">Highlighted Products</h2>
+          
+          <ul class="nav__ul nav__ul--extra">
+            <li>
+              <a href="#">Olaplex</a>
+            </li>
+            
+            <li>
+              <a href="#">Hair Care</a>
+            </li>
+            
+            <li>
+              <a href="#">Skin Care</a>
+            </li>
+            
+            <li>
+              <a href="#">Makeup</a>
+            </li>
+            
+            <li>
+              <a href="#">Glamour Brand</a>
+            </li>
+            
+            <li>
+              <a href="#">Beauty Products</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav__item">
+          <h2 class="nav__title">Legal</h2>
+          
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+            
+            <li>
+              <a href="#">Sitemap</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      
+      <div class="legal">
+        <p>&copy; 2022. All rights reserved.</p>
+        
+        <div class="legal__links">
+          <span>Devloped by <span class="heart"> AVISHEK SINGH ♥ </span> MERN Stack Devloper</span>
+        </div>
+      </div>
+    </footer>
+
   </body>
   <script type="text/javascript" src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySlider", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+   <!-- Initialize Swiper -->
+   <script>
+     var swiper = new Swiper(".mySwiper", {
+       slidesPerView: 4,
+       spaceBetween: 30,
+       slidesPerGroup: 4,
+       loop: true,
+       loopFillGroupWithBlank: true,
+       pagination: {
+         el: ".swiper-pagination",
+         clickable: true,
+       },
+       navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+       },
+     });
+   </script>
+   <script type="text/javascript" src="main.js"></script>
 </html>
