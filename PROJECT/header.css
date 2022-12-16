@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@600&family=Quicksand&display=swap');
+
+a {
+    text-decoration: none;
+  }
+
+  /* first div head 1 styling */
+
+  header {
+    background-color: #fff;
+    font-family: montserrat;
+    position: sticky;
+    width: 100%;
+    top: 0%;
+    z-index: 100;
+    /* border: 1px solid red; */
+  }
+
+  .imagelogo {
+    width: 200px;
+    /* border: 1px solid red; */
+  }
+  
+  hr {
+    height: 1px;
+    background-color: black;
+    margin: 0px;
+  }
+
+  .search {
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1.5px solid black;
+    width: 400px;
+    height: 22px;
+    border-radius: 25px;
+  }
+
+  .search input {
+    font-family: montserrat;
+    flex: 1;
+    border: none;
+    outline: none;
+    /* border: 1px solid tomato; */
+  }
+
+  .search button {
+    font-size: 25px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    /* border: 1px solid red; */
+  }
+
+  .accn{
+    width: 100px;
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+  }
+
+  .cart{
+    width: 65px;
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+  }
+
+
+  .accn a{
+    color: #2e3337;
+  }
+  .accn a:hover{
+    color: #95A5A6;
+  }
+  .cart a{
+    color: #2e3337;
+  }
+
+  .head1 {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid black; */
+  }
+
+  .head2 {
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  .head2 > ul {
+    padding: 10px;
+    margin: 0px;
+    position: relative;
+    display: flex;
+  }
+  .head2 > ul > li {
+    /* position: relative; */
+    list-style: none;
+  }
+  .head2 > ul > li > a {
+    text-decoration: none;
+    color: black;
+    /* position: relative; */
+    list-style: none;
+    padding: 10px;
+  }
+  .head2 > ul > li > a:hover {
+    background-color:#2e3337;
+    color: whitesmoke;
+    border-radius: 15px;
+    transition: 1s;
+    transition-delay: 0.5ms;
+  }
