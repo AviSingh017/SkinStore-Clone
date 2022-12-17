@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkinVerse-Product_page</title>
+
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="slider.css">
+    <style>
+
+  /* first div head 1 styling */
+
+  header {
+    background-color: #fff;
+    font-family: montserrat;
+    position: sticky;
+    width: 100%;
+    top: 0%;
+    z-index: 100;
+    /* border: 1px solid red; */
+  }
+
+  .imagelogo {
+    width: 200px;
+    /* border: 1px solid red; */
+  }
+  
+  hr {
+    height: 1px;
+    background-color: black;
+    margin: 0px;
+  }
+
+  .search {
+    box-sizing: unset;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1.5px solid black;
+    width: 400px;
+    height: 22px;
+    border-radius: 25px;
+  }
+
+  .search input {
+    font-family: montserrat;
+    flex: 1;
+    border: none;
+    outline: none;
+    /* border: 1px solid tomato; */
+  }
+
+  .search button {
+    font-size: 23px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    /* border: 1px solid red; */
+  }
+
+  .accn{
+    width: 100px;
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+  }
+
+  .cart{
+    height: 50px;
+    width: 85px;
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+  }
+
+
+  .accn a{
+    color: #2e3337;
+    text-decoration: none;
+  }
+  .accn a:hover{
+    color: #95A5A6;
+    text-decoration: none;
+  }
+  .cart a{
+    text-decoration: none;
+    color: #2e3337;
+  }
+
+  .head1 {
+    /* padding-top: 10px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid black; */
+  }
+
+  .head2 {
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  .head2 > ul {
+    padding: 10px;
+    margin: 0px;
+    position: relative;
+    display: flex;
+  }
+  .head2 > ul > li {
+    /* position: relative; */
+    list-style: none;
+  }
+  .head2 > ul > li > a {
+    text-decoration: none;
+    color: black;
+    /* position: relative; */
+    list-style: none;
+    padding: 10px;
+  }
+  .head2 > ul > li > a:hover {
+    background-color:#2e3337;
+    color: whitesmoke;
+    border-radius: 15px;
+    transition: 1s;
+    transition-delay: 0.5ms;
+  }
+
+  .fa-user, .fa-shopping-cart{
+    color: #2e3337;
+    text-decoration: none;
+  }
+  #counter{
+    font-size: 14px;
+    /* border: 1px solid red ; */
+    margin-bottom: 25px;
+    background-color: #2e3337;
+    color: #fff;
+    padding: 0px 5px;
+
+    border-radius: 50%;
+    /* padding-bottom: 20px; */
+
+  }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="head1">
+          <a href="Shopping.html" class="logo"
+            ><img src="SkinVerse.png" class="imagelogo" alt=""
+          /></a>
+          <form class="search">
+            <input id="srch"
+              type="text"
+              placeholder="Search for a Product or Brand"
+              name="search"
+            />
+            <button type="submit"><i class="fas fa-search"></i></button>
+          </form>
+  
+          <div class="accn">
+            <i class="fas fa-user"></i>
+            <a href="login.html">Account</a>
+          </div>
+  
+          <div class="cart">
+            <i class="fas fa-shopping-cart"></i>
+            <a href="Checkout.html">Cart</a>
+            <div id="counter">0</div>
+          </div>
+  
+        </div>
+        <hr />
+        <div class="head2">
+          <ul>
+            <li><a href="Shopping.html">Brands</a></li>
+            <li><a href="Shopping.html">Holiday Gifts 🎁</a></li>
+            <li><a href="Shopping.html">Sale</a></li>
+            <li><a href="Shopping.html">Skin Care</a></li>
+            <li><a href="Shopping.html">Hair</a></li>
+            <li><a href="Shopping.html">Makeup</a></li>
+            <li><a href="Shopping.html">Bath & Body</a></li>
+            <li><a href="Shopping.html">Fragrance</a></li>
+            <li><a href="Shopping.html">Self-Care</a></li>
+            <li><a href="Shopping.html">Tools</a></li>
+            <li><a href="Shopping.html">New & Trending</a></li>
+            <li><a href="Shopping.html">Build a Routine</a></li>
+            <li><a href="Shopping.html">Blog</a></li>
+          </ul>
+        </div>
+      </header>
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid mb-5 mt-30px">
+        <div class="row border-top px-xl-5">
+            <!-- <div class="col-lg-3 d-none d-lg-block">
+                <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: 2px; padding: 0 30px;">
+                    <h6 class="m-0" >Categories</h6>
+                    <i class="fa fa-angle-down text-dark"></i>
+                </a>
+                <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
+                    <div  class="navbar-nav w-100 overflow-hidden" style="height: 410px">
+                        <a href="" class="nav-item nav-link">Liquid</a>
+                        <a href="" class="nav-item nav-link">Lipstick</a>
+                        <a href="" class="nav-item nav-link">Pencil</a>
+                        <a href="" class="nav-item nav-link">Powder</a>
+                        <a href="" class="nav-item nav-link">Lip Gloss</a>
+                        <a href="" class="nav-item nav-link">Gel</a>
+                        <a href="" class="nav-item nav-link">Cream</a>
+                        <a href="" class="nav-item nav-link">Palette</a>
+                        <a href="" class="nav-item nav-link">Concealer</a>
+                        <a href="" class="nav-item nav-link">Highlighter</a>
+                        
+                    </div>
+                </nav>
+            </div> -->
+            <div class="col-lg-3 d-none d-lg-block">
+            <select id="filter" class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: 2px; padding: 0 30px;">
+                        <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
+                          <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
+                          <option class="nav-item nav-link" value="">Filter By Category</option>
+                          <option class="nav-item nav-link" value="liquid">Liquid</option>
+                          <option class="nav-item nav-link" value="lipstick">Lipstick</option>
+                          <option class="nav-item nav-link" value="pencil">Pencil</option>
+                          <option class="nav-item nav-link" value="powder">Powder</option>
+                          <option class="nav-item nav-link" value="lip_gloss">Lip Gloss</option>
+                          <option class="nav-item nav-link" value="gel">Gel</option>
+                          <option class="nav-item nav-link" value="cream">Cream</option>
+                          <option class="nav-item nav-link" value="palette">Palette</option>
+                          <option class="nav-item nav-link" value="concealer">Concealer</option>
+                          <option class="nav-item nav-link" value="highlighter">Highlighter</option>
+                          </div>
+                          
+                        </nav> 
+              <!-- <option value="">Filter By Category</option>
+                          <option value="Liquid">Liquid</option>
+                          <option value="Lipstick">Lipstick</option>
+                          <option value="Pencil">Pencil</option>
+                          <option value="Powder">Powder</option>
+                          <option value="Lip Gloss">Lip Gloss</option>
+                          <option value="Gel">Gel</option>
+                          <option value="Cream">Cream</option>
+                          <option value="Palette">Palette</option>
+                          <option value="Concealer">Concealer</option>
+                          <option value="Highlighter">Highlighter</option> -->
+                        </select>
+                      </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                    <a href="" class="text-decoration-none d-block d-lg-none">
+                        <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse"></div>
+                </nav>
+                <div id="header-carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" style="height: 410px;">
+                            <img class="img-fluid" src="img/carousel-1.jpg" alt="Image">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
+                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">Fashionable SkinCare Products</h3>
+                                    <a href="" class="btn btn-light py-2 px-3">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="height: 410px;">
+                            <img class="img-fluid" src="img/carousel-2.jpg" alt="Image">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order only on SkinVerse</h4>
+                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">Reasonable Price</h3>
+                                    <a href="" class="btn btn-light py-2 px-3">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                        <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                            <span class="carousel-control-prev-icon mb-n2"></span>
+                        </div>
+                    </a>
+                    <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                        <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                            <span class="carousel-control-next-icon mb-n2"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Featured Start -->
+    <div class="container-fluid pt-5">
+        <div class="row px-xl-5 pb-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-shipping-fast text-primary m-0 mr-2"></h1>
+                    <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
+                    <h1 class="fas fa-exchange-alt text-primary m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-phone-volume text-primary m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Appending fetcged data here -->
+    <div id="container"></div>
+
+    <footer class="footer">
+        <div class="footer__addr">
+          <h1 class="footer__logo">SkinVerse</h1>
+              
+          <h2>Contact</h2>
+          
+          <address>
+            5534 LA DownTown India, Kolkata 22193-10212<br>
+                
+            <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+          </address>
+        </div>
+        
+        <ul class="footer__nav">
+          <li class="nav__item">
+            <h2 class="nav__title">Media</h2>
+      
+            <ul class="nav__ul">
+              <li>
+                <a href="Shopping.html">Online</a>
+              </li>
+      
+              <li>
+                <a href="Shopping.html">Print</a>
+              </li>
+                  
+              <li>
+                <a href="Shopping.html">Alternative Ads</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav__item nav__item--extra">
+            <h2 class="nav__title">Highlighted Products</h2>
+            
+            <ul class="nav__ul nav__ul--extra">
+              <li>
+                <a href="Shopping.html">Olaplex</a>
+              </li>
+              
+              <li>
+                <a href="Shopping.html">Hair Care</a>
+              </li>
+              
+              <li>
+                <a href="Shopping.html">Skin Care</a>
+              </li>
+              
+              <li>
+                <a href="Shopping.html">Makeup</a>
+              </li>
+              
+              <li>
+                <a href="Shopping.html">Glamour Brand</a>
+              </li>
+              
+              <li>
+                <a href="Shopping.html">Beauty Products</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav__item">
+            <h2 class="nav__title">Legal</h2>
+            
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              
+              <li>
+                <a href="#">Terms of Use</a>
+              </li>
+              
+              <li>
+                <a href="#">Sitemap</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        
+        <div class="legal">
+          <p>&copy; 2022. All rights reserved.</p>
+          
+          <div class="legal__links">
+            <span>Devloped by <span class="heart"> AVISHEK SINGH ♥ </span> MERN Stack Devloper</span>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+
+        let Mainbox = document.getElementById("container");
+
+        let Farr = [];
+    
+        fetch("new.json")
+          .then((response) => {
+            return response.json();
+          })
+          .then((Data) => {
+           Farr = Data;
+            Pdata(Data);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+    
+        function Pdata(arr) {
+
+          Mainbox.innerHTML = null;
+
+          arr.forEach((element, index) => {
+            let box = document.createElement("div");
+            box.setAttribute("class", "child");
+    
+            let img = document.createElement("img");
+            img.setAttribute("class","img")
+            img.setAttribute("src", element.api_featured_image);
+
+            let namediv = document.createElement("div");
+            namediv.setAttribute("class", "name")
+    
+            let name = document.createElement("p");
+            name.setAttribute("class", "Name");
+            name.textContent = element.name
+    
+            let caty = document.createElement("p");
+            caty.textContent = element.category;
+    
+            let Price = document.createElement("p");
+            Price.textContent = "Price: "+"$"+element.price;
+    
+            let btn = document.createElement("button");
+            btn.setAttribute("class", "addbtn");
+            btn.innerText = "Add to Cart"
+
+            btn.addEventListener("click", (e)=>{
+              let Addcart = JSON.parse(localStorage.getItem("cart")) || [];
+
+              let Incart = false;
+              for(let i=0; i< Addcart.length; i++){
+                if(Addcart[i].id == element.id){
+                  Incart = true;
+                  break;
+                }
+              }
+
+              if(Incart==true){
+                alert("Product Already added in Cart")
+              }else{
+                Addcart.push({ ...element, quantity: 1 });
+                localStorage.setItem("cart", JSON.stringify(Addcart));
+                alert("Product Added to cart");
+              }
+            });
+
+            namediv.append(name)
+            box.append(img,namediv,Price,caty,btn);
+            Mainbox.append(box);
+          });
+        }
+
+
+        //filter
+
+        document.getElementById("filter").addEventListener("click", (e)=>{
+          let Bname = e.target.value;
+          console.log(Bname);
+          let newData = Farr.filter((element,index)=>{
+            return element.category == Bname;
+          });
+          Pdata(newData);
+        })
+
+
+        document.getElementById("srch").addEventListener("input", (e)=>{
+          let input = e.target.value;
+          console.log(input);
+          let newwData = Farr.filter((element,index)=>{
+            return element.category.toLowerCase().includes(input);
+          });
+          Pdata(newwData);
+        })
+      </script>
+
+</body>
+
+</html>
