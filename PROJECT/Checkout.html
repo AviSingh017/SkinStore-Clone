@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="slider.css" />
+    <link rel="stylesheet" href="checkout.css" />
+    <link rel="stylesheet" href="shop.css" />
+    <script
+      src="https://kit.fontawesome.com/3af5a307c6.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      #shopping-cart {
+        width: 98%;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+      }
+
+      .plus,
+      .minus {
+        display: block;
+        margin: auto;
+        text-align: center;
+        font-family: montserrat;
+        padding: 7px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <header>
+      <div class="head1">
+        <a href="index.html" class="logo"
+          ><img src="SkinVerse.png" class="imagelogo" alt=""
+        /></a>
+        <form class="search">
+          <input
+            type="text"
+            placeholder="Search for a Product or Brand"
+            name="search"
+          />
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+
+        <div class="accn">
+          <i class="fas fa-user"></i>
+          <a href="login.html">Account</a>
+        </div>
+
+        <div class="cart">
+          <i class="fas fa-shopping-cart"></i>
+          <a href="Checkout.html">Cart</a>
+          <div id="counter">0</div>
+        </div>
+      </div>
+      <hr />
+      <div class="head2">
+        <ul>
+          <li><a href="Shopping.html">Brands</a></li>
+          <li><a href="Shopping.html">Holiday Gifts 🎁</a></li>
+          <li><a href="Shopping.html">Sale</a></li>
+          <li><a href="Shopping.html">Skin Care</a></li>
+          <li><a href="Shopping.html">Hair</a></li>
+          <li><a href="Shopping.html">Makeup</a></li>
+          <li><a href="Shopping.html">Bath & Body</a></li>
+          <li><a href="Shopping.html">Fragrance</a></li>
+          <li><a href="Shopping.html">Self-Care</a></li>
+          <li><a href="Shopping.html">Tools</a></li>
+          <li><a href="Shopping.html">New & Trending</a></li>
+          <li><a href="Shopping.html">Build a Routine</a></li>
+          <li><a href="Shopping.html">Blog</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <h1 id="total">
+      Your Total cart Price is:- <span id="cart-total">0</span>
+    </h1>
+
+    <div id="shopping-cart"></div>
+
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__logo">SkinVerse</h1>
+
+        <h2>Contact</h2>
+
+        <address>
+          5534 LA DownTown India, Kolkata 22193-10212<br />
+
+          <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+        </address>
+      </div>
+
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Media</h2>
+
+          <ul class="nav__ul">
+            <li>
+              <a href="Shopping.html">Online</a>
+            </li>
+
+            <li>
+              <a href="Shopping.html">Print</a>
+            </li>
+
+            <li>
+              <a href="Shopping.html">Alternative Ads</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav__item nav__item--extra">
+          <h2 class="nav__title">Highlighted Products</h2>
+
+          <ul class="nav__ul nav__ul--extra">
+            <li>
+              <a href="Shopping.html">Olaplex</a>
+            </li>
+
+            <li>
+              <a href="Shopping.html">Hair Care</a>
+            </li>
+
+            <li>
+              <a href="Shopping.html">Skin Care</a>
+            </li>
+
+            <li>
+              <a href="Shopping.html">Makeup</a>
+            </li>
+
+            <li>
+              <a href="Shopping.html">Glamour Brand</a>
+            </li>
+
+            <li>
+              <a href="Shopping.html">Beauty Products</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav__item">
+          <h2 class="nav__title">Legal</h2>
+
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+
+            <li>
+              <a href="#">Sitemap</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="legal">
+        <p>&copy; 2022. All rights reserved.</p>
+
+        <div class="legal__links">
+          <span
+            >Devloped by <span class="heart"> AVISHEK SINGH ♥ </span> MERN Stack
+            Devloper</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      let Mainbox = document.getElementById("shopping-cart");
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      CartTota(cart);
+      Pdata(cart);
+
+      function Pdata(arr) {
+        Mainbox.innerHTML = null;
+        document.getElementById("counter").textContent = arr.length;
+
+        arr.forEach((element, index) => {
+          console.log(element);
+          let box = document.createElement("div");
+          box.setAttribute("class", "child");
+
+          let img = document.createElement("img");
+          img.setAttribute("class", "img");
+          img.setAttribute("src", element.api_featured_image);
+
+          let namediv = document.createElement("div");
+          namediv.setAttribute("class", "name");
+
+          let name = document.createElement("p");
+          name.setAttribute("class", "Name");
+          name.textContent = element.name;
+
+          let caty = document.createElement("p");
+          caty.textContent = element.category;
+
+          let Price = document.createElement("p");
+          Price.textContent = "Price: " + "$" + element.price;
+
+          let plus = document.createElement("button");
+          plus.setAttribute("class", "Plus");
+          plus.textContent = "+";
+
+          plus.addEventListener("click", () => {
+            element.quantity++;
+            Qnt.textContent = element.quantity;
+            CartTota(cart);
+          });
+
+          let Qnt = document.createElement("span");
+          Qnt.setAttribute("class", "Quantity");
+          Qnt.textContent = element.quantity;
+
+          let minus = document.createElement("button");
+          minus.setAttribute("class", "Minus");
+          minus.textContent = "-";
+
+          minus.addEventListener("click", () => {
+            element.quantity--;
+            Qnt.textContent = element.quantity;
+            CartTota(cart);
+          });
+
+          let Del = document.createElement("button");
+          Del.setAttribute("class", "addbtn");
+          Del.innerText = "Remove";
+
+          Del.addEventListener("click", () => {
+            arr.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(arr));
+            Pdata(arr);
+          });
+
+          namediv.append(name);
+          box.append(img, namediv, Price, caty, plus, Qnt, minus, Del);
+          Mainbox.append(box);
+        });
+      }
+
+      function CartTota(K) {
+        let ans = 0;
+        for (let i = 0; i < K.length; i++) {
+          ans += K[i].quantity * K[i].price;
+        }
+        document.getElementById("cart-total").textContent = ans.toFixed(2);
+      }
+    </script>
+  </body>
+</html>
