@@ -49,6 +49,7 @@
   }
 
   .search {
+    background: linear-gradient(to right, #eecda3, #ef629f);
     box-sizing: unset;
     padding: 10px 10px;
     display: flex;
@@ -61,6 +62,7 @@
   }
 
   .search input {
+    background: linear-gradient(to right, #eecda3, #ef629f);
     font-family: montserrat;
     flex: 1;
     border: none;
@@ -74,6 +76,7 @@
     background-color: #fff;
     border: none;
     outline: none;
+    background: #ef629f
     /* border: 1px solid red; */
   }
 
@@ -124,6 +127,7 @@
     margin: 0px;
     justify-content: center;
     margin-top: 0px;
+    background: linear-gradient(to right, #eecda3, #ef629f);
   }
   .head2 > ul {
     padding: 10px;
@@ -174,7 +178,7 @@
 
     <header>
         <div class="head1">
-          <a href="Shopping.html" class="logo"
+          <a href="index.html" class="logo"
             ><img src="SkinVerse.png" class="imagelogo" alt=""
           /></a>
           <form class="search">
@@ -222,27 +226,7 @@
     <!-- Navbar Start -->
     <div class="container-fluid mb-5 mt-30px">
         <div class="row border-top px-xl-5">
-            <!-- <div class="col-lg-3 d-none d-lg-block">
-                <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: 2px; padding: 0 30px;">
-                    <h6 class="m-0" >Categories</h6>
-                    <i class="fa fa-angle-down text-dark"></i>
-                </a>
-                <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
-                    <div  class="navbar-nav w-100 overflow-hidden" style="height: 410px">
-                        <a href="" class="nav-item nav-link">Liquid</a>
-                        <a href="" class="nav-item nav-link">Lipstick</a>
-                        <a href="" class="nav-item nav-link">Pencil</a>
-                        <a href="" class="nav-item nav-link">Powder</a>
-                        <a href="" class="nav-item nav-link">Lip Gloss</a>
-                        <a href="" class="nav-item nav-link">Gel</a>
-                        <a href="" class="nav-item nav-link">Cream</a>
-                        <a href="" class="nav-item nav-link">Palette</a>
-                        <a href="" class="nav-item nav-link">Concealer</a>
-                        <a href="" class="nav-item nav-link">Highlighter</a>
-                        
-                    </div>
-                </nav>
-            </div> -->
+           
             <div class="col-lg-3 d-none d-lg-block">
             <select id="filter" class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: 2px; padding: 0 30px;">
                         <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
@@ -261,17 +245,7 @@
                           </div>
                           
                         </nav> 
-              <!-- <option value="">Filter By Category</option>
-                          <option value="Liquid">Liquid</option>
-                          <option value="Lipstick">Lipstick</option>
-                          <option value="Pencil">Pencil</option>
-                          <option value="Powder">Powder</option>
-                          <option value="Lip Gloss">Lip Gloss</option>
-                          <option value="Gel">Gel</option>
-                          <option value="Cream">Cream</option>
-                          <option value="Palette">Palette</option>
-                          <option value="Concealer">Concealer</option>
-                          <option value="Highlighter">Highlighter</option> -->
+           
                         </select>
                       </div>
             <div class="col-lg-9">
@@ -482,6 +456,8 @@
 
           Mainbox.innerHTML = null;
 
+          let z = document.getElementById("cart-total");
+          
           arr.forEach((element, index) => {
             let box = document.createElement("div");
             box.setAttribute("class", "child");
@@ -524,6 +500,7 @@
                 Addcart.push({ ...element, quantity: 1 });
                 localStorage.setItem("cart", JSON.stringify(Addcart));
                 alert("Product Added to cart");
+                
               }
             });
 
@@ -555,6 +532,7 @@
           Pdata(newwData);
         })
       </script>
+      
 
 </body>
 

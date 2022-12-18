@@ -28,7 +28,7 @@ a {
   }
 
   .search {
-    background: linear-gradient(to right, #eecda3, #ef629f);
+    background: linear-gradient(to right, #eecda3, #F8BBD0);
     
     padding: 10px 10px;
     display: flex;
@@ -41,7 +41,7 @@ a {
   }
 
   .search input {
-    background: linear-gradient(to right, #eecda3, #ef629f);
+    background: linear-gradient(to right, #eecda3, #F8BBD0);
     font-family: montserrat;
     flex: 1;
     border: none;
@@ -55,7 +55,7 @@ a {
     background-color: #fff;
     border: none;
     outline: none;
-    background: #ef629f
+    background: #F8BBD0
     
     /* border: 1px solid red; */
   }
@@ -120,7 +120,7 @@ a {
     margin-top: 0px;
    
     background: linear-gradient(to right, #43cea2, #185a9d);
-    background: linear-gradient(to right, #eecda3, #ef629f)
+    background: linear-gradient(to right, #eecda3, #F8BBD0)
   }
   .head2 > ul {
     padding: 10px;

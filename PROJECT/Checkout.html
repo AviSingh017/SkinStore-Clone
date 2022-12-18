@@ -25,16 +25,66 @@
         gap: 30px;
       }
 
-      .plus,
-      .minus {
-        display: block;
+      .Plus,
+      .Minus {
         margin: auto;
+        margin: 5px;
         text-align: center;
-        font-family: montserrat;
-        padding: 7px;
+        font-family: manrope;
+        font-size: 14px;
+        padding: 5px 10px;
         border-radius: 10px;
         background-color: black;
         color: white;
+      }
+
+      #total {
+        width: 60%;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 20px;
+        font-family: montserrat;
+        padding: 5px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+      }
+
+      #cart-total {
+        color: #4caf50;
+        font-family: manrope;
+      }
+
+      .Quantity {
+        font-family: quicksand;
+        font-size: 17px;
+      }
+
+      .adp {
+        margin-left: 20px;
+        margin-top: 20px;
+      }
+      .Pbutton {
+        text-align: center;
+        margin: 20px 10px;
+      }
+
+      .Pbutton button:hover{
+        background-color: #4caf50;
+        
+      }
+      .Pbutton button {
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        font-family: montserrat;
+        font-size: 20px;
+        width: 250px;
+        background-color: black;
+      }
+      .Pbutton a {
+        text-decoration: none;
+        color: #fff;
       }
     </style>
   </head>
@@ -88,7 +138,13 @@
       Your Total cart Price is:- <span id="cart-total">0</span>
     </h1>
 
+    <h3 class="adp">Your Added Products 👇🏻</h3>
+
     <div id="shopping-cart"></div>
+
+    <div class="Pbutton">
+      <button><a href="#">Let's Checkout 🎉</a></button>
+    </div>
 
     <footer class="footer">
       <div class="footer__addr">
@@ -193,7 +249,8 @@
 
       function Pdata(arr) {
         Mainbox.innerHTML = null;
-        document.getElementById("counter").textContent = arr.length;
+        let numb = document.getElementById("counter");
+        let x = (numb.textContent = arr.length);
 
         arr.forEach((element, index) => {
           console.log(element);
@@ -262,8 +319,14 @@
         for (let i = 0; i < K.length; i++) {
           ans += K[i].quantity * K[i].price;
         }
-        document.getElementById("cart-total").textContent = ans.toFixed(2);
+        document.getElementById("cart-total").textContent =
+          "💰" + ans.toFixed(2);
       }
+
+      document.querySelector(".Pbutton").addEventListener("click", (e)=>{
+        alert(" Hurray! 🎉 Order Successfully Placed!");
+        window.location.href = "index.html";
+      })
     </script>
   </body>
 </html>
