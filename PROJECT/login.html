@@ -6,9 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login/Sign-Up</title>
     <link rel="stylesheet" href="login.css">
+    <style>
+      #alert{
+        display: flex;
+        margin: auto;
+        width: 25%;
+        padding: 5px;
+        border-radius: 10px;
+        font-family: montserrat;
+        justify-content: center;
+        /* margin-bottom: 10px; */
+        margin-top: 15px;
+        background: linear-gradient(to right, #ff105f,#ffad06);
+      }
+      #alert h3{
+        margin: auto;
+      }
+    </style>
 </head>
 <body>
+  
     <div class="mainbox">
+      <div id="alert"><h3>Please Login/SignUp Here!</h3></div>
         <div class="formbox">
             <div class="buttonbox">
                 <div id="btn"></div>
@@ -91,11 +110,14 @@ let formData1= JSON.parse(localStorage.getItem("skinstore-data")) || [];
       formData1.forEach(element => {
         console.log(element);
         if(element.Name == form1.namee.value && element.Pass == form1.passwordd.value){
-          alert("Sign in Successful Go to Homepage!")
-          window.location.href="index.html?name="+element.Name;
+          document.getElementById("alert").textContent = "Signed in Successfully 🎉"
+          setTimeout(()=>{
+            window.location.href="index.html?name="+element.Name;
+          },1500)
+          // window.location.href="index.html?name="+element.Name;
         }
         else{
-          alert("Wrong Credentials")
+          document.getElementById("alert").textContent = " Opps! Invalid Credentials ❌"
         }
       });
       }
