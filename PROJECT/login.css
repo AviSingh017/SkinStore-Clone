@@ -10,14 +10,14 @@
 .mainbox{
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(banner1.jpg);
+    background-image: url(loginbanner.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
 }
 
 .formbox{
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: 380px;
     height: 480px;
     position: relative;
@@ -26,6 +26,8 @@
     padding: 5px;
     overflow: hidden;
     border-radius: 20px;
+    box-shadow: rgb(147, 86, 164) 0px 20px 30px -10px;
+    box-shadow: #ff105f 0px 54px 55px, #ffad06 0px -12px 30px, #ff105f 0px 4px 6px, #ffad06 0px 12px 13px, #ffad06 0px -3px 5px;
 }
 
 .buttonbox{
