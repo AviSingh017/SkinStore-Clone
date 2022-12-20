@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@600&family=Quicksand&display=swap');
+
+        *{
+            font-family: montserrat;
+        }
+
+        body{
+            background: linear-gradient(to right, #43cea2, #185a9d);
+        }
+        .mainbox{
+            background-color: black;
+            border-radius: 10px;
+            padding: 10px;
+            padding-bottom: 25px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            width: 400px;
+            margin: auto;
+            margin-top: 70px;
+        }
+        .mainbox > div{
+            margin-top: 10px;
+            /* border: 1px solid red; */
+
+        }
+        .card > div{
+            margin-top: 10px;
+            /* border: 1px solid red; */
+
+        }
+        .adress input{
+            width: 98%;
+        }
+        h4{
+            color: white;
+            font-family: montserrat;
+            text-align: center;
+        }
+        .button{
+            width: 200px;
+            margin-left: 570px;
+            margin-top: 10px;
+        }
+        .button button{
+            border-radius: 10px;
+            padding: 10px;
+            background-color: black;
+        }
+        .button button a{
+           text-decoration: none;
+           color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainbox">
+        <h4>Billing Address</h4>
+        <div class="Name">
+            <input type="text" placeholder="Name">
+        </div>
+        <div class="Maddress">
+            <select class="first">
+                <option >Country</option>
+                <option value="Ind">India</option>
+              </select>
+              <select class="second">
+                <option >State</option>
+                <option value="Kol">Kolkata</option>
+                <option value="Del">Delhi</option>
+                <option value="Mumb">Mumbai</option>
+                <option value="Mumb">Chennai</option>
+              </select>
+        </div>
+        <div class="adress">
+            <input type="text" placeholder="Shipping Address">
+        </div>
+        <div class="Zip">
+            <input type="text" placeholder="PinCode">
+        </div>
+        <div class="card">
+            <h4>Credit/Debit Card</h4>
+            <div>
+                <input type="text" placeholder="Name on Card">
+            </div>
+            <div>
+                <input type="text" placeholder="Card Number">
+            </div>
+            <div>
+                <input type="date" placeholder="Card Expiry">
+                <input type="text" placeholder="CVV">
+            </div>
+        </div>
+    </div>
+    
+    <div class="button">
+        <button ><a href="index.html">Confirm Payment</a></button>
+    </div>
+    <script>
+        document.querySelector(".button").addEventListener("click", (e)=>{
+        alert(" Hurray! 🎉 Order Successfully Placed!");
+        window.location.href = "index.html";
+      })
+    </script>
+</body>
+</html>
