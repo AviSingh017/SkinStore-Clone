@@ -31,7 +31,4 @@
 - Overall, this website provides a comprehensive e-commerce platform that is easy to use, well-designed, and secure. It provides all the necessary features for an e-commerce website and it is designed to provide a great user experience for the customers.
 
 
-*Deployed Link:* **https://elegant-kelpie-14b113.netlify.app/**
-
-
 *Deployed Link* **https://phenomenal-sfogliatella-eb6891.netlify.app/**
